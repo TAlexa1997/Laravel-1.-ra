@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
+            //elsődleges kulcs, id a neve ,auto-increment(egész szám típusú magától növekedik), bigint típusú (nagy egész szám)
             $table->id();
             $table->string('name');
             $table->string('email')->unique();
